@@ -8,7 +8,6 @@ import CardComponent from './components/CardsComponent';
 import './App.css';
 
 const AppComponent = () => {
-  const [countries, setCountries] = useState({ timezones: [] });
   const [countrySearch, setCountrySearch] = useState({});
   const inputRef = useRef(null);
 
@@ -30,7 +29,7 @@ const AppComponent = () => {
 
   const deleteCard = (e) => {
     console.log(e);
-    const el = countrySearch.timezones.filter((country) => country != e);
+    const el = countrySearch.timezones.filter((country) => country !== e);
     setCountrySearch({ timezones: el });
   };
 
