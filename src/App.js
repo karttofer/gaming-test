@@ -13,15 +13,7 @@ const AppComponent = () => {
   const inputRef = useRef(null);
 
   useEffect(() => {
-    fetch('/timezones')
-      .then((e) => e.json())
-      .then((res) => {
-        setCountries(res);
-      });
-
-    return (el) => {
-      country();
-    };
+    country();
   }, []);
 
   const country = (e) => {

@@ -27,11 +27,4 @@ app.get('/specific/timezone', (req, res) => {
       res.send({ timezones: response });
     });
 });
-
-// ➢ GET /timezones that read timezones from this public api
-// ○ Parse the result to a name and a local time.
-// ➢ GET /timezones/:name that gets a specific timezone
-// ➢ PUT /timezones/:name that selects a timezone (a log entry is OK)
-// ➢ DELETE /timezones/:name that selects a timezone (a log entry is OK)
-
 app.listen(8080);
